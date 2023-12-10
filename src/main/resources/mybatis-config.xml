@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>-->
+<!--                <property name="url" value="jdbc:mysql://localhost:3306/library_manage"/>-->
+<!--                <property name="username" value="root"/>-->
+<!--                <property name="password" value="wzw19991105"/>-->
+<!--            </dataSource>-->
+
+            <dataSource type="com.example.javawebstudy.Utils.C3P0DataSourceFactory">
+                <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/library_manage"/>
+                <property name="user" value="root"/>
+                <property name="password" value="wzw19991105"/>
+                <property name="initialPoolSize" value="3"/>
+                <property name="maxPoolSize" value="15"/>
+                <property name="minPoolSize" value="3"/>
+                <property name="maxIdleTime" value="3600"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.example.javawebstudy.mapper"/>
+    </mappers>
+</configuration>

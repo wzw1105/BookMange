@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<!-- Begin Head -->
+
+<head th:replace="common.html::common_head(~{::title}, ~{})">
+    <title>图书管理系统 - 添加书籍</title>
+</head>
+
+<body>
+    <div th:replace="common.html::common_loader"></div>
+    <div class="page-wrapper">
+        <div th:replace="common.html::common_header"></div>
+        <div th:replace="common.html::common_sidebar"></div>
+        <div class="main-content">
+            <!-- Page Title Start -->
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-title-wrapper">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Basic Form</h4>
+                        </div>
+                        <div class="breadcrumb-list">
+                            <ul>
+                                <li class="breadcrumb-link">
+                                    <a href="javascript:void(0);"><i class="fas fa-home mr-2"></i>Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-link active">Basic Form</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- From Start -->
+            <div class="from-wrapper">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>添加书籍信息</h4>
+                                <!--                            <p class="card-desc">Here are examples of form add <code>.separate-form</code> tag with inputs.</p>-->
+                            </div>
+                            <div class="card-body">
+                                <form class="separate-form" method="post" action="add_book">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <!--                                    <h5 class="from-title mb-1">借阅信息</h5>-->
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label for="name" class="col-form-label">书名</label>
+                                                    <input class="form-control" type="text" placeholder="书名" id="name" name = "name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label for="date" class="col-form-label">出版日期</label>
+                                                    <input class="form-control" type="date" placeholder="出版日期" id="date" name="date">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label for="quantity" class="col-form-label">数量</label>
+                                                    <input class="form-control" type="text" placeholder="数量" id="quantity" name="total_quantity">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <button class="btn btn-primary" type="submit">提交</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div th:replace="common.html::common_footer"></div>
+        </div>
+    </div>
+    <div th:replace="common.html::common_js"></div>
+</body>
+</html>
